@@ -15,7 +15,8 @@ RUN \
 
 RUN \
 	set -x &&\
-    yum groupinstall "fonts" && fc-cache -fv
+    yum groupinstall "fonts" -y &&\
+    fc-cache -fv
 
 ADD index.php /var/www/html/
 
