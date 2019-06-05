@@ -13,6 +13,10 @@ RUN \
 	mkdir -p /var/www/html/work &&\
 	chown apache:apache /var/www/html/work
 
+RUN \
+	set -x &&\
+    yum groupinstall "fonts" && fc-cache -fv
+
 ADD index.php /var/www/html/
 
 EXPOSE 80
