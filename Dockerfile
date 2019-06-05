@@ -19,5 +19,5 @@ RUN \
 
 ADD index.php /var/www/html/
 
-EXPOSE 80
+EXPOSE 8080
 CMD apachectl start&&tail -f /var/log/httpd/access_log
